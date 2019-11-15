@@ -13,7 +13,12 @@ export class PersonneService {
   savePersonne(f) {
     let personne: PersonneModel = new PersonneModel(f.sexe, f.nom, f.prenom, f.surnom, f.dateDeNaissance, f.taille);
 
-    this.resultat.push(personne);
+    if (personne.sexe && personne.nom && personne.prenom && personne.surnom && personne.dateDeNaissance && personne.taille) {
+
+      this.resultat.push(personne);
+
+    }
+
 
   }
 

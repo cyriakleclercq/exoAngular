@@ -1,4 +1,4 @@
-<div>
+<div id="formulaire">
     <form class="example-container" (ngSubmit)="register()" [formGroup]="userForm">
 
 
@@ -35,3 +35,17 @@
         <button type="submit"> soumettre </button>
     </form>
 </div>
+
+<table>
+
+    <tr>
+        <th>sexe</th>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>surnom</th>
+        <th>date de naissance</th>
+        <th>taille</th>
+    </tr>
+</table>
+
+<app-resultats *ngFor="let personne of resultat" [personne]="personne"></app-resultats>

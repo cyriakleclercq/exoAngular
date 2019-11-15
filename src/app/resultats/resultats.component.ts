@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PersonneService } from '../services/personne.service';
 import { PersonneModel } from '../models/personneModel';
 
@@ -9,16 +9,12 @@ import { PersonneModel } from '../models/personneModel';
 })
 export class ResultatsComponent implements OnInit {
 
-  resultat: PersonneModel[];
+  @Input() personne: PersonneModel[];
+
   constructor(private personneService: PersonneService) { }
 
 
   ngOnInit() {
-    this.getPersonnes();
-  }
-
-  getPersonnes() {
-    this.resultat = this.personneService.getAllPersonnes()
   }
 
 

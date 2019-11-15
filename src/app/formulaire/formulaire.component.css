@@ -6,3 +6,19 @@
   .example-container > * {
     width: 100%;
   }
+
+  table {
+    width: 100%;
+    border: solid;
+
+}
+
+ td, th {
+    border: solid;
+    width: 17%;
+    text-align: center;
+}
+
+#formulaire {
+  margin-bottom: 100px;
+}

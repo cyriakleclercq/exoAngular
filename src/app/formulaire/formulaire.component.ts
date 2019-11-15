@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { PersonneService } from '../services/personne.service';
 import { Router } from '@angular/router';
+import { PersonneModel } from '../models/personneModel';
 
 
 
@@ -13,6 +14,8 @@ import { Router } from '@angular/router';
 export class FormulaireComponent implements OnInit {
 
   userForm: FormGroup;
+  resultat: PersonneModel[];
+
 
   constructor(fb: FormBuilder, private personneService: PersonneService, private router: Router) {
     this.userForm = fb.group({
@@ -27,13 +30,17 @@ export class FormulaireComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getPersonnes();
+  }
+
+  getPersonnes() {
+    this.resultat = this.personneService.getAllPersonnes()
   }
 
   register() {
 
     this.personneService.savePersonne(this.userForm.value);
     this.userForm.reset();
-    this.router.navigate(['/resultats']);
 
   }
 

@@ -15,4 +15,5 @@ export class PersonneModel {
         this.dateDeNaissance = dateDeNaissance;
         this.taille = taille;
     }
+
 }
