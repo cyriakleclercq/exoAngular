@@ -1,0 +1,27 @@
+<table>
+
+    <tr>
+        <th>sexe</th>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>surnom</th>
+        <th>date de naissance</th>
+        <th>taille</th>
+    </tr>
+</table>
+
+<div *ngFor="let personne of resultat">
+
+    <table>
+        <tr>
+
+            <td> {{ personne.sexe }} </td>
+            <td> {{ personne.nom }} </td>
+            <td> {{ personne.prenom }} </td>
+            <td> {{ personne.surnom }} </td>
+            <td> {{ personne.dateDeNaissance }} </td>
+            <td> {{ personne.taille }} </td>
+
+        </tr>
+    </table>
+</div>

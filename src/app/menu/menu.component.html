@@ -1,0 +1,44 @@
+<mat-sidenav-container id="h_min">
+
+    <mat-sidenav fixedinViewport="true" mode="side" opened id="menu_lien">
+
+        <mat-toolbar>
+            <span> Liens</span>
+        </mat-toolbar>
+
+        <mat-toolbar>
+
+            <mat-nav-list>
+                <a mat-list-item [routerLink]="['accueil']"> Page d'accueil </a>
+            </mat-nav-list>
+
+        </mat-toolbar>
+
+        <mat-toolbar>
+
+            <mat-nav-list>
+                <a mat-list-item [routerLink]="['formulaire']"> Page de formulaire </a>
+            </mat-nav-list>
+
+        </mat-toolbar>
+
+        <mat-toolbar>
+
+            <mat-nav-list>
+                <a mat-list-item [routerLink]="['resultats']"> Page de resultats </a>
+            </mat-nav-list>
+
+        </mat-toolbar>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <mat-toolbar>
+            <span> Contenue </span>
+        </mat-toolbar>
+
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
